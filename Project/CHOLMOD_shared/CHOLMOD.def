@@ -26,4 +26,5 @@ EXPORTS
 	cholmod_triplet_to_sparse
 	cholmod_analyze_p
 	cholmod_amd
+	cholmod_camd
 	cholmod_print_common
