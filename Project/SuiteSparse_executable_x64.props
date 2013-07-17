@@ -10,7 +10,7 @@
   <ItemDefinitionGroup>
     <Link />
     <ClCompile>
-      <PreprocessorDefinitions>NTIMER;NPARTITION;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NTIMER;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
