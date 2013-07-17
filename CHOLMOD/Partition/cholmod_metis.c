@@ -43,6 +43,7 @@
  * Supports any xtype (pattern, real, complex, or zomplex).
  */
 
+#ifdef USE_METIS
 #ifndef NPARTITION
 
 #include "cholmod_internal.h"
@@ -788,4 +789,5 @@ int CHOLMOD(metis)
     PRINT1 (("cholmod_metis done\n")) ;
     return (Common->status == CHOLMOD_OK) ;
 }
+#endif
 #endif

@@ -72,6 +72,7 @@ SuiteSparse_long cholmod_l_nested_dissection (cholmod_sparse *,
     SuiteSparse_long *, size_t, SuiteSparse_long *, SuiteSparse_long *,
     SuiteSparse_long *, cholmod_common *) ;
 
+#ifdef USE_METIS
 /* -------------------------------------------------------------------------- */
 /* cholmod_metis */
 /* -------------------------------------------------------------------------- */
@@ -93,6 +94,7 @@ int cholmod_metis
 
 int cholmod_l_metis (cholmod_sparse *, SuiteSparse_long *, size_t, int,
     SuiteSparse_long *, cholmod_common *) ;
+#endif
 
 /* -------------------------------------------------------------------------- */
 /* cholmod_ccolamd */
@@ -186,6 +188,7 @@ SuiteSparse_long cholmod_bisect	/* returns # of nodes in separator */
 SuiteSparse_long cholmod_l_bisect (cholmod_sparse *, SuiteSparse_long *,
     size_t, int, SuiteSparse_long *, cholmod_common *) ;
 
+#ifdef USE_METIS
 /* -------------------------------------------------------------------------- */
 /* cholmod_metis_bisector */
 /* -------------------------------------------------------------------------- */
@@ -208,6 +211,7 @@ SuiteSparse_long cholmod_metis_bisector	/* returns separator size */
 SuiteSparse_long cholmod_l_metis_bisector (cholmod_sparse *,
     SuiteSparse_long *, SuiteSparse_long *, SuiteSparse_long *,
     cholmod_common *) ;
+#endif
 
 /* -------------------------------------------------------------------------- */
 /* cholmod_collapse_septree */

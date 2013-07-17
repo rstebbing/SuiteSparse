@@ -672,10 +672,12 @@ cholmod_factor *CHOLMOD(analyze_p2)
 	    /* -------------------------------------------------------------- */
 
 #ifndef NPARTITION
+#ifdef USE_METIS
 	    /* postorder parameter is false, because it will be later, below */
 	    /* workspace: Iwork (4*nrow+uncol), Flag (nrow), Head (nrow+1) */
 	    Common->called_nd = TRUE ;
 	    CHOLMOD(metis) (A, fset, fsize, FALSE, Perm, Common) ;
+#endif
 #else
 	    Common->status = CHOLMOD_NOT_INSTALLED ;
 #endif
@@ -693,10 +695,12 @@ cholmod_factor *CHOLMOD(analyze_p2)
 	     * it calls CAMD or CCOLAMD on the whole graph, instead of MMD
 	     * on just the leaves. */
 #ifndef NPARTITION
+#ifdef USE_METIS
 	    /* workspace: Flag (nrow), Head (nrow+1), Iwork (2*nrow) */
 	    Common->called_nd = TRUE ;
 	    CHOLMOD(nested_dissection) (A, fset, fsize, Perm, CParent, Cmember,
 		    Common) ;
+#endif
 #else
 	    Common->status = CHOLMOD_NOT_INSTALLED ;
 #endif

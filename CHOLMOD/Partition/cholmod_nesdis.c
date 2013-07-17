@@ -38,6 +38,7 @@
  * Supports any xtype (pattern, real, complex, or zomplex).
  */
 
+#ifdef USE_METIS
 #ifndef NPARTITION
 
 #include "cholmod_internal.h"
@@ -2161,4 +2162,5 @@ SuiteSparse_long CHOLMOD(collapse_septree)
 
     return (nc_new) ;
 }
+#endif
 #endif
