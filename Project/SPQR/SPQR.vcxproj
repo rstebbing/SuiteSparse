@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5459C322-55D5-4364-A2DE-CB7BA3C2FBBA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SPQR</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SPQR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\SPQR\Include;$(ProjectDir)\..\..\CHOLMOD\Include;$(ProjectDir)\..\..\SuiteSparse_config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SPQR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\SPQR\Include;$(ProjectDir)\..\..\CHOLMOD\Include;$(ProjectDir)\..\..\SuiteSparse_config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SPQR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\SPQR\Include;$(ProjectDir)\..\..\CHOLMOD\Include;$(ProjectDir)\..\..\SuiteSparse_config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SPQR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\..\SPQR\Include;$(ProjectDir)\..\..\CHOLMOD\Include;$(ProjectDir)\..\..\SuiteSparse_config;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FloatingPointModel>Precise</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SPQR\Source\spqr_1colamd.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_1factor.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_1fixed.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_analyze.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_append.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_assemble.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_cpack.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_csize.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_cumsum.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_debug.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_factorize.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_fcsize.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_freefac.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_freenum.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_freesym.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_front.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_fsize.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_happly.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_happly_work.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_hpinv.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_kernel.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_larftb.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_maxcolnorm.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_panel.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_parallel.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_rconvert.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_rcount.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_rhpack.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_rmap.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_rsolve.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_shift.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_stranspose1.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_stranspose2.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_tol.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_trapezoidal.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\spqr_type.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\SuiteSparseQR.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\SuiteSparseQR_C.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\SuiteSparseQR_expert.cpp" />
+    <ClCompile Include="..\..\SPQR\Source\SuiteSparseQR_qmult.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SPQR\Include\spqr.hpp" />
+    <ClInclude Include="..\..\SPQR\Include\SuiteSparseQR.hpp" />
+    <ClInclude Include="..\..\SPQR\Include\SuiteSparseQR_C.h" />
+    <ClInclude Include="..\..\SPQR\Include\SuiteSparseQR_definitions.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
