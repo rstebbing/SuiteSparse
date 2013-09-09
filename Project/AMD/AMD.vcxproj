@@ -88,6 +88,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\AMD\acml5.3.1\ifort64_mp\include;../../Windows;../../AMD/Include;../../CAMD/Include;../../COLAMD/Include;../../CCOLAMD/Include;../../CHOLMOD/Include;../../SuiteSparse_config;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\AMD\acml5.3.1\ifort64_mp\lib;$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
