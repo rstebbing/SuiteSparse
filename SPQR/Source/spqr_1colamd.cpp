@@ -559,12 +559,14 @@ template <typename Entry> int spqr_1colamd  // TRUE if OK, FALSE otherwise
             cholmod_l_amd (AT, NULL, 0, (Long *) (Q1fill + n1cols), cc) ;
         }
 #ifndef NPARTITION
+#ifdef USE_METIS
         else if (ordering == SPQR_ORDERING_METIS)
         {
             // use CHOLMOD's interface to METIS to order A'*A (if installed)
             cholmod_l_metis (AT, NULL, 0, TRUE,
                 (Long *) (Q1fill + n1cols), cc) ;
         }
+#endif
 #endif
         else if (ordering == SPQR_ORDERING_CHOLMOD)
         {
