@@ -72,7 +72,7 @@
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_template.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Windows\cholmod_blas_acml.h">
+    <ClInclude Include="..\..\Windows\cholmod_blas_mkl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

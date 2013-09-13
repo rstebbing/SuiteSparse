@@ -15,8 +15,8 @@
 #ifndef CHOLMOD_BLAS_H
 #define CHOLMOD_BLAS_H
 
-#ifdef USE_ACML
-#include "cholmod_blas_acml.h"
+#ifdef USE_MKL
+#include "cholmod_blas_mkl.h"
 #else
 
 /* ========================================================================== */

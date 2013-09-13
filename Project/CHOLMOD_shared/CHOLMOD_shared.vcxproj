@@ -78,6 +78,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>
@@ -102,7 +103,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libacml_mp_dll.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mkl_intel_lp64_dll.lib;mkl_intel_thread_dll.lib;mkl_core_dll.lib;libiomp5md.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>CHOLMOD.def</ModuleDefinitionFile>
       <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
@@ -132,14 +133,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>USE_ACML;WIN32;NDEBUG;_WINDOWS;_USRDLL;CHOLMOD_SHARED_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_MKL;WIN32;NDEBUG;_WINDOWS;_USRDLL;CHOLMOD_SHARED_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>libacml_mp_dll.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mkl_intel_lp64_dll.lib;mkl_intel_thread_dll.lib;mkl_core_dll.lib;libiomp5md.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\$(TargetName).lib</ImportLibrary>
       <ModuleDefinitionFile>CHOLMOD.def</ModuleDefinitionFile>
     </Link>
@@ -159,7 +160,7 @@
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_partition.h" />
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_supernodal.h" />
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_template.h" />
-    <ClInclude Include="..\..\Windows\cholmod_blas_acml.h" />
+    <ClInclude Include="..\..\Windows\cholmod_blas_mkl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\CHOLMOD\Check\cholmod_check.c" />

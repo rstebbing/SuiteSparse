@@ -4,7 +4,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <OutDir>$(SolutionDir)Demo</OutDir>
-    <LibraryPath>C:\AMD\acml5.3.1\ifort64_mp\lib;$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Program Files (x86)\Intel\Composer XE 2013 SP1\compiler\lib\intel64;C:\Program Files (x86)\Intel\Composer XE 2013 SP1\mkl\lib\intel64;;$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
     <IncludePath>../../AMD/Include;../../CAMD/Include;../../COLAMD/Include;../../CCOLAMD/Include;../../CHOLMOD/Include;../../SuiteSparse_config;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup>

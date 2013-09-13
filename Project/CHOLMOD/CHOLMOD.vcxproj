@@ -33,7 +33,7 @@
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_partition.h" />
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_supernodal.h" />
     <ClInclude Include="..\..\CHOLMOD\Include\cholmod_template.h" />
-    <ClInclude Include="..\..\Windows\cholmod_blas_acml.h" />
+    <ClInclude Include="..\..\Windows\cholmod_blas_mkl.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\CHOLMOD\Check\cholmod_check.c" />
@@ -183,7 +183,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>USE_ACML;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_MKL;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
