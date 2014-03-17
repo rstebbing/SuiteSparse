@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libacml_mp_dll.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libacml_mp_dll.lib;AMD.lib;CAMD.lib;CCOLAMD.lib;COLAMD.lib;SuiteSparse_config.lib;CHOLMOD.lib;AMD_L.lib;CAMD_L.lib;CCOLAMD_L.lib;COLAMD_L.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>CHOLMOD_L.def</ModuleDefinitionFile>
       <ImportLibrary>$(SolutionDir)$(Platform)\$(Configuration)\$(TargetName).lib</ImportLibrary>
     </Link>
