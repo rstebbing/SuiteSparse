@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CCOLAMD_L", "CCOLAMD_L\CCOL
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "COLAMD_L", "COLAMD_L\COLAMD_L.vcxproj", "{687B0467-8835-4B8C-9686-B17858C93AC6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "METIS", "METIS\METIS.vcxproj", "{CB827EA3-3081-4529-B985-DC0E4D3F891C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -126,6 +128,10 @@ Global
 		{687B0467-8835-4B8C-9686-B17858C93AC6}.Debug|x64.Build.0 = Debug|x64
 		{687B0467-8835-4B8C-9686-B17858C93AC6}.Release|x64.ActiveCfg = Release|x64
 		{687B0467-8835-4B8C-9686-B17858C93AC6}.Release|x64.Build.0 = Release|x64
+		{CB827EA3-3081-4529-B985-DC0E4D3F891C}.Debug|x64.ActiveCfg = Debug|x64
+		{CB827EA3-3081-4529-B985-DC0E4D3F891C}.Debug|x64.Build.0 = Debug|x64
+		{CB827EA3-3081-4529-B985-DC0E4D3F891C}.Release|x64.ActiveCfg = Release|x64
+		{CB827EA3-3081-4529-B985-DC0E4D3F891C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

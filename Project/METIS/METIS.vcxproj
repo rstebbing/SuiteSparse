@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB827EA3-3081-4529-B985-DC0E4D3F891C}</ProjectGuid>
+    <RootNamespace>METIS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>../../metis-4.0/Lib;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>../../metis-4.0/Lib;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\metis-4.0\Lib\defs.h" />
+    <ClInclude Include="..\..\metis-4.0\Lib\macros.h" />
+    <ClInclude Include="..\..\metis-4.0\Lib\metis.h" />
+    <ClInclude Include="..\..\metis-4.0\Lib\proto.h" />
+    <ClInclude Include="..\..\metis-4.0\Lib\rename.h" />
+    <ClInclude Include="..\..\metis-4.0\Lib\struct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\metis-4.0\Lib\balance.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\bucketsort.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\ccgraph.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\coarsen.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\compress.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\debug.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\estmem.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\fm.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\fortran.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\frename.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\graph.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\initpart.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kvmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kwayfm.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kwayrefine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kwayvolfm.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\kwayvolrefine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\match.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mbalance.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mbalance2.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mcoarsen.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\memory.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mesh.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\meshpart.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mfm.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mfm2.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mincover.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\minitpart.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\minitpart2.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mkmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mkwayfmh.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mkwayrefine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mmatch.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mmd.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mpmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mrefine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mrefine2.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\mutil.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\myqsort.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\ometis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\parmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\pmetis.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\pqueue.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\refine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\separator.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\sfm.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\srefine.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\stat.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\subdomains.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\timing.c" />
+    <ClCompile Include="..\..\metis-4.0\Lib\util.c" />
+    <ClCompile Include="..\..\metis-4.0\Windows\winrand.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
