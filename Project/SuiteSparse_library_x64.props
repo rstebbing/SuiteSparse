@@ -3,12 +3,12 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <IncludePath>F:\external\acml5.3.1\ifort64_mp\include;../../Windows;../../AMD/Include;../../CAMD/Include;../../COLAMD/Include;../../CCOLAMD/Include;../../CHOLMOD/Include;../../SuiteSparse_config;$(IncludePath)</IncludePath>
+    <IncludePath>F:\external\acml5.3.1\ifort64_mp\include;../../Windows;../../AMD/Include;../../CAMD/Include;../../COLAMD/Include;../../CCOLAMD/Include;../../CHOLMOD/Include;../../SuiteSparse_config;../../metis-4.0/Lib;$(IncludePath)</IncludePath>
     <LibraryPath>F:\external\acml5.3.1\ifort64_mp\lib;$(SolutionDir)$(Platform)\$(Configuration)\;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
-      <PreprocessorDefinitions>NSUPERNODAL;NTIMER;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>USE_METIS;NSUPERNODAL;NTIMER;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />
