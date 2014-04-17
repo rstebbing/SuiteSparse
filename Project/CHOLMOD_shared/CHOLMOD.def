@@ -28,3 +28,4 @@ EXPORTS
 	cholmod_amd
 	cholmod_camd
 	cholmod_print_common
+	cholmod_metis

@@ -28,6 +28,7 @@ EXPORTS
 	cholmod_amd
 	cholmod_camd
 	cholmod_print_common
+	cholmod_metis
 	cholmod_l_norm_dense
 	cholmod_l_read_sparse
 	cholmod_l_free_factor
@@ -70,3 +71,4 @@ EXPORTS
 	cholmod_l_realloc
 	cholmod_l_allocate_work
 	cholmod_l_postorder
+	cholmod_l_metis
